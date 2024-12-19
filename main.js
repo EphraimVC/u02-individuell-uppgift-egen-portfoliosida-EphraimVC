@@ -5,13 +5,14 @@ let aboutData = []
 let themeBtn = document.querySelector(".themeToggle")
 let toggleModeStatus = document.querySelector(".toggleMode")
 let toggleStatus = false
+const workContainer = document.querySelector(".worklist_container");  
+const eduContainer = document.querySelector(".education_container");    
+const aboutContainer = document.querySelector(".about_text")
 
 let toggleLs = localStorage.setItem("themeMode", false)
 
 
-
 async function getData() {
-    const aboutContainer = document.querySelector(".about_text")
     try {
         const response = await fetch("./data/cv.json")
         if (!response.ok)throw new Error("failed to fetch data");
@@ -28,16 +29,7 @@ async function getData() {
 }
 
 
-themeBtn.addEventListener("click",() => { 
-    console.log("togg clicked");
-    toggleStatus = !toggleStatus;
-    toggleModeStatus.src = !toggleStatus ? "./assests/darkMode.svg" : "./assests/lightMode.svg";
-    toggleModeStatus.alt = !toggleStatus ? "dark mode icon" : "light mode icon";
-    })
-
-
-const renderEdu=() => { 
-    const eduContainer = document.querySelector(".education_container");    
+const renderEdu =() => { 
     let educationHtml = educationData.map(edu =>
         ` <div class="work work1">
                         <div class="work_titles">
@@ -56,7 +48,6 @@ const renderEdu=() => {
 }
 
 const renderWork=() => { 
-    const workContainer = document.querySelector(".worklist_container");    
     let workHtml = workData.map(work =>
         `<div class="work work1">
                         <div class="work_titles">
@@ -75,13 +66,6 @@ const renderWork=() => {
 }
 
 getData();
-
-
-// document.addEventListener("DOMContentLoaded", () => { 
-    
-// })
-
-
 
 
 

@@ -20,6 +20,14 @@
             "duration": "2 years",
             "description":"2 year long program to become a fullstack javascript developer, where i will learn frontend and backend technologies using javascript",
             "period": "2024/08 - ongoing"
+            },
+            {
+            "course": "MTR Nordic Train Driver program",
+            "place": "Mtr Nordic",
+            "location": "Stockholm",
+            "duration": "3 Months",
+            "description":"intensive course to become a train driver in stockholm city, where i learned the basics of driving a train and the rules and regulations of the swedish train system",
+            "period": "2016/05 - 2016/08"
             }
     ],
     "work":[
